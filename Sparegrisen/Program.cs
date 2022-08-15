@@ -22,6 +22,7 @@ namespace Sparegrisen
             Console.WriteLine("Antal år:");
             years = Convert.ToInt32(Console.ReadLine());
 
+            // We use a for loop to display each years intrest.
             for(int i = 0; i < years; i++)
             {
                 decimal interest2 = interest / 100;
@@ -31,8 +32,9 @@ namespace Sparegrisen
                 Console.Write(money + "*" + "(1 + " + interest2 + ") = " + earned);
                 Console.WriteLine();
 
-                money = earned;
-                year++;
+                money = earned; // We set our the money eqaul to the earned so next time it loops through it uses the newest value in our account.
+
+                year++; // we make year count up be one each time we loop through.
             }
 
             Console.ReadLine();
